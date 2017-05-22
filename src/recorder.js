@@ -47,7 +47,7 @@ export class Recorder {
 		};
 
 		source.connect(this.splitter);
-		this.splitter.connect(analyser, 0, 0);
+		this.splitter.connect(this.analyser, 0, 0);
 		this.analyser.connect(this.node);
 
 		source.connect(this.node);
